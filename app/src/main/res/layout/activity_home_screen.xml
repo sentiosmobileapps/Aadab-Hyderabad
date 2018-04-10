@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_app_background"
-    android:padding="@dimen/dimen_16dp">
+    android:padding="@dimen/dimen_8dp">
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/imageview_app_logo"
@@ -38,8 +38,8 @@
             android:id="@+id/textview_news1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/dimen_16dp"
-            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
             android:layout_toEndOf="@+id/imageview_news"
             android:layout_toRightOf="@+id/imageview_news"
             android:gravity="center|start"
@@ -72,8 +72,8 @@
             android:id="@+id/textview_epaper1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/dimen_16dp"
-            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
             android:layout_toEndOf="@+id/imageview_epaper"
             android:layout_toRightOf="@+id/imageview_epaper"
             android:gravity="center|start"
@@ -91,7 +91,6 @@
         android:layout_marginRight="@dimen/dimen_4dp"
         android:layout_marginTop="@dimen/dimen_16dp"
         android:background="@drawable/ic_polling_background"
-        android:gravity="center"
         android:padding="@dimen/dimen_8dp"
         app:layout_constraintEnd_toStartOf="@+id/rlayout_quiz"
         app:layout_constraintStart_toStartOf="parent"
@@ -143,8 +142,8 @@
             android:id="@+id/textview_quiz"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/dimen_16dp"
-            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
             android:layout_toEndOf="@+id/imageview_quiz"
             android:layout_toRightOf="@+id/imageview_quiz"
             android:gravity="center|start"
@@ -167,6 +166,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rlayout_polling">
 
+
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/imageview_gallery"
             android:layout_width="wrap_content"
@@ -177,8 +177,8 @@
             android:id="@+id/textview_gallery"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/dimen_16dp"
-            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
             android:layout_toEndOf="@+id/imageview_gallery"
             android:layout_toRightOf="@+id/imageview_gallery"
             android:gravity="center|start"
@@ -191,7 +191,7 @@
 
     <RelativeLayout
         android:id="@+id/rlayout_video"
-        android:layout_width="173dp"
+        android:layout_width="0dp"
         android:layout_height="?android:actionBarSize"
         android:layout_marginLeft="@dimen/dimen_4dp"
         android:layout_marginStart="@dimen/dimen_4dp"
@@ -212,8 +212,8 @@
             android:id="@+id/textview_video"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/dimen_16dp"
-            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
             android:layout_toEndOf="@+id/imageview_video"
             android:layout_toRightOf="@+id/imageview_video"
             android:gravity="center|start"

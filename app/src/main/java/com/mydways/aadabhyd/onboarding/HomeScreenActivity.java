@@ -23,11 +23,14 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
         RelativeLayout mPollingLayout = findViewById(R.id.rlayout_polling);
         RelativeLayout mQuizLayout = findViewById(R.id.rlayout_quiz);
         RelativeLayout mPunchLayout = findViewById(R.id.rlayout_punches);
+        RelativeLayout mGalleryLayout = findViewById(R.id.rlayout_gallery);
         mNewsLayout.setOnClickListener(this);
         mEpaperLayout.setOnClickListener(this);
         mPollingLayout.setOnClickListener(this);
         mQuizLayout.setOnClickListener(this);
         mPunchLayout.setOnClickListener(this);
+        mGalleryLayout.setOnClickListener(this);
+
     }
 
     @Override
@@ -48,6 +51,9 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
                 break;
             case R.id.rlayout_punches:
                 navigator.navigateToLatestPunch(this);
+                break;
+            case R.id.rlayout_gallery:
+               // navigator.navigateToLatestPunch(this);
                 break;
         }
     }
