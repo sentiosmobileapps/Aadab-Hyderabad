@@ -4,6 +4,6 @@
     <corners android:radius="@dimen/dimen_4dp" />
     <stroke
         android:width="2dp"
-        android:color="@color/colorQuiz" />
+        android:color="@color/colorGallery" />
     <solid android:color="@android:color/transparent" />
 </shape>

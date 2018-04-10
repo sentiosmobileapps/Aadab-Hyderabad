@@ -23,8 +23,7 @@
         android:layout_marginRight="@dimen/dimen_4dp"
         android:layout_marginTop="@dimen/dimen_16dp"
         android:background="@drawable/ic_epaper_background"
-        android:gravity="center"
-        android:padding="@dimen/dimen_4dp"
+        android:padding="@dimen/dimen_8dp"
         app:layout_constraintEnd_toStartOf="@+id/rlayout_epaper"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageview_app_logo">
@@ -58,8 +57,7 @@
         android:layout_marginStart="@dimen/dimen_4dp"
         android:layout_marginTop="@dimen/dimen_16dp"
         android:background="@drawable/ic_news_background"
-        android:gravity="center"
-        android:padding="@dimen/dimen_4dp"
+        android:padding="@dimen/dimen_8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/rlayout_news"
         app:layout_constraintTop_toBottomOf="@+id/imageview_app_logo">
@@ -95,8 +93,11 @@
         android:background="@drawable/ic_polling_background"
         android:gravity="center"
         android:padding="@dimen/dimen_8dp"
-        app:layout_constraintEnd_toStartOf="@+id/rlayout_epaper"
+        app:layout_constraintEnd_toStartOf="@+id/rlayout_quiz"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rlayout_news">
+
+
 
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/imageview_polls"
@@ -108,14 +109,14 @@
             android:id="@+id/textview_polling"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/dimen_16dp"
-            android:layout_marginStart="@dimen/dimen_16dp"
+            android:layout_marginLeft="@dimen/dimen_8dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
             android:layout_toEndOf="@+id/imageview_polls"
             android:layout_toRightOf="@+id/imageview_polls"
             android:gravity="center|start"
             android:text="@string/string_opinion_poll"
             android:textAllCaps="false"
-            android:textColor="@color/colorPolling"
+            android:textColor="#DE3126"
             android:textSize="18sp" />
     </RelativeLayout>
 
@@ -127,8 +128,7 @@
         android:layout_marginStart="@dimen/dimen_4dp"
         android:layout_marginTop="@dimen/dimen_16dp"
         android:background="@drawable/ic_quiz_background"
-        android:gravity="center"
-        android:padding="@dimen/dimen_4dp"
+        android:padding="@dimen/dimen_8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/rlayout_polling"
         app:layout_constraintTop_toBottomOf="@+id/rlayout_epaper">
@@ -161,10 +161,9 @@
         android:layout_marginEnd="@dimen/dimen_4dp"
         android:layout_marginRight="@dimen/dimen_4dp"
         android:layout_marginTop="@dimen/dimen_16dp"
-        android:background="@drawable/ic_polling_background"
-        android:gravity="center"
-        android:padding="@dimen/dimen_4dp"
-        app:layout_constraintEnd_toStartOf="@+id/rlayout_quiz"
+        android:background="@drawable/ic_gallery_background"
+        android:padding="@dimen/dimen_8dp"
+        app:layout_constraintEnd_toStartOf="@+id/rlayout_video"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rlayout_polling">
 
@@ -185,21 +184,20 @@
             android:gravity="center|start"
             android:text="@string/string_gallery"
             android:textAllCaps="false"
-            android:textColor="@color/colorPolling"
+            android:textColor="@color/colorGallery"
             android:textSize="18sp" />
     </RelativeLayout>
 
 
     <RelativeLayout
         android:id="@+id/rlayout_video"
-        android:layout_width="0dp"
+        android:layout_width="173dp"
         android:layout_height="?android:actionBarSize"
         android:layout_marginLeft="@dimen/dimen_4dp"
         android:layout_marginStart="@dimen/dimen_4dp"
         android:layout_marginTop="@dimen/dimen_16dp"
-        android:background="@drawable/ic_quiz_background"
-        android:gravity="center"
-        android:padding="@dimen/dimen_4dp"
+        android:background="@drawable/ic_video_background"
+        android:padding="@dimen/dimen_8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/rlayout_gallery"
         app:layout_constraintTop_toBottomOf="@+id/rlayout_quiz">
@@ -221,7 +219,7 @@
             android:gravity="center|start"
             android:text="@string/string_video"
             android:textAllCaps="false"
-            android:textColor="@color/colorQuiz"
+            android:textColor="@color/colorVideo"
             android:textSize="18sp" />
     </RelativeLayout>
 
@@ -230,8 +228,6 @@
         android:id="@+id/rlayout_punches"
         android:layout_width="0dp"
         android:layout_height="?android:actionBarSize"
-        android:layout_marginLeft="@dimen/dimen_4dp"
-        android:layout_marginStart="@dimen/dimen_4dp"
         android:layout_marginTop="@dimen/dimen_16dp"
         android:background="@drawable/ic_punch_background"
         android:gravity="center"
