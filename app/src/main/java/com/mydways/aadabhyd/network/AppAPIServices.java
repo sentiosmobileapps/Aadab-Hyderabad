@@ -1,5 +1,6 @@
 package com.mydways.aadabhyd.network;
 
+import com.mydways.aadabhyd.imagegallery.model.GalleryModel;
 import com.mydways.aadabhyd.latestscrolling.model.DrawerItem;
 import com.mydways.aadabhyd.latestscrolling.model.LatestNewsItem;
 import com.mydways.aadabhyd.opnionpoll.model.ViwerPolling;
@@ -47,7 +48,7 @@ public interface AppAPIServices {
             option);
 
     @GET("gallery")
-    Call<BaseAPIResponse> getAadabGallery();
+    Call<BaseAPIResponse<ArrayList<GalleryModel>>> getAadabGallery();
 
     @GET("gallery/{galleryId}")
     Call<BaseAPIResponse> getGalleryById(@Path("galleryId") int galleryId);

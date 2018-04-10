@@ -53,7 +53,7 @@ public class HomeScreenActivity extends AppCompatActivity implements View.OnClic
                 navigator.navigateToLatestPunch(this);
                 break;
             case R.id.rlayout_gallery:
-               // navigator.navigateToLatestPunch(this);
+                navigator.navigateToGalleryPage(this);
                 break;
         }
     }

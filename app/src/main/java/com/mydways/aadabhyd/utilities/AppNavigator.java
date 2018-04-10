@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import com.google.gson.Gson;
+import com.mydways.aadabhyd.imagegallery.view.GalleryViewActivity;
 import com.mydways.aadabhyd.latestscrolling.model.LatestNewsItem;
 import com.mydways.aadabhyd.latestscrolling.view.LatestNewsActivity;
 import com.mydways.aadabhyd.latestscrolling.view.NewsInDetailActivity;
@@ -57,6 +58,11 @@ public class AppNavigator {
 
     public void navigateToPollingPage(Context context) {
         Intent intent = new Intent(context, OpnionPollActivity.class);
+        context.startActivity(intent);
+    }
+
+    public void navigateToGalleryPage(Context context) {
+        Intent intent = new Intent(context, GalleryViewActivity.class);
         context.startActivity(intent);
     }
 }

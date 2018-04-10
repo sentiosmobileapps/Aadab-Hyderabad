@@ -11,4 +11,5 @@ public class AppConstant {
     public static final int API_POST_POLLING_OPTION = 5;
     public static final int API_NAVIGATION_MENU = 6;
     public static final int API_CATEGORY_NEWS = 7;
+    public static final int API_GALLERY= 8;
 }
