@@ -9,6 +9,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -53,6 +54,11 @@ public class GalleryViewActivity extends BaseActivity {
         adapter = new GalleryAdapter(mEventBus,getApplicationContext());
         recyclerView.setLayoutManager(new LinearLayoutManager(this,
                 LinearLayoutManager.VERTICAL, false));
+
+        recyclerView.setHasFixedSize(true);
+
+        //RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getApplicationContext(),2);
+       // recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
 
         toolbar.setTitle("Gallery");

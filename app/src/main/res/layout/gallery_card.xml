@@ -13,11 +13,14 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+
             android:id="@+id/img_android"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:scaleType="fitXY"
+            android:background="@drawable/ic_gallery"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
             />
 
     </RelativeLayout>

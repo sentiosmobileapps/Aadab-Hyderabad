@@ -1,6 +1,8 @@
 package com.mydways.aadabhyd.imagegallery.view;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
@@ -19,6 +21,7 @@ import com.mydways.aadabhyd.latestscrolling.event.AdapterItemClickEvent;
 import com.squareup.otto.Bus;
 import com.squareup.picasso.Picasso;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryViewHolder> {
@@ -52,8 +55,23 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
                 .into(holder.imageViewPic);*/
         if(item!=null)
 
-        Picasso.with(mContext).load(item.default_src).into(holder.imageViewPic);
+        Picasso.with(mContext).load(item.default_src).fit()
+                .centerCrop().into(holder.imageViewPic);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try{
+                    //Intent intent = new Intent(android.content.Intent.ACTION_VIEW);
+                    Uri data = Uri.parse(items.get(position).default_src);
+                    //intent.setDataAndType(data, "image/*");
+                    Intent viewImageIntent = new Intent(android.content.Intent.ACTION_VIEW, data);
+                    mContext.startActivity(viewImageIntent);
+                }catch (Exception e){
 
+                }
+
+            }
+        });
 
     }
 
@@ -72,7 +90,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
         notifyDataSetChanged();
     }
 
-    class GalleryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    class GalleryViewHolder extends RecyclerView.ViewHolder{
 
         /*AppCompatTextView textViewHeader;
         AppCompatTextView textViewSubTitle;*/
@@ -83,15 +101,9 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
        /*     textViewHeader = itemView.findViewById(R.id.textview_news_title);
             textViewSubTitle = itemView.findViewById(R.id.textview_news_short_desc);*/
             imageViewPic = itemView.findViewById(R.id.img_android);
-            itemView.setOnClickListener(this);
+
         }
 
-        @Override
-        public void onClick(View v) {
-            if(bus!=null){
-                bus.post(new AdapterItemClickEvent(getAdapterPosition()));
-            }
-        }
     }
 
 }
