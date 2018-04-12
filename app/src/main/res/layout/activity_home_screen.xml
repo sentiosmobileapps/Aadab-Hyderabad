@@ -9,8 +9,8 @@
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/imageview_app_logo"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/ic_logo"
+        android:layout_height="@dimen/_160sdp"
+        android:src="@drawable/ic_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
